@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="menu-avis.css">
 </head>
 <body>
   <header class="header">
@@ -18,6 +19,8 @@
       <a href="#accueil">Accueil</a>
       <a href="#restaurant">Le restaurant</a>
       <a href="#cuisine">La cuisine</a>
+      <a href="#menu">Menu</a>
+      <a href="#avis">Avis</a>
       <a href="#infos">Infos pratiques</a>
       <a class="nav-call" href="tel:+33467438920">04 67 43 89 20</a>
     </nav>
@@ -32,7 +35,7 @@
         <h1>Le Sanboulou</h1>
         <p class="hero-subtitle">Restaurant traditionnel français & méditerranéen</p>
         <div class="hero-actions">
-          <a href="#restaurant" class="btn btn-primary">Découvrir le restaurant</a>
+          <a href="#menu" class="btn btn-primary">Voir le menu</a>
           <a href="tel:+33467438920" class="btn btn-light">Réserver par téléphone</a>
         </div>
       </div>
@@ -87,8 +90,101 @@
       </div>
     </section>
 
+    <section id="menu" class="menu section">
+      <div class="section-label">03 — LE MENU</div>
+      <h2 class="menu-title">Notre <em>carte</em></h2>
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-tab="entrees">Entrées</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="plats">Plats</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="desserts">Desserts</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="crepes">Crêpes & glaces</button>
+      </div>
+
+      <div class="panel active" id="entrees">
+        <div class="dish"><h4>Assiette de tapas</h4><p>Poulpes marinés, moules piquantes, beignets d'oignon</p></div>
+        <div class="dish"><h4>Assiette vegan</h4><p>Falafel (croquettes de pois chiche), salade verte, sauce blanche</p></div>
+        <div class="dish"><h4>Mariachi de gambas</h4><p>Gambas snackées à la plancha, guacamole, tartare tomate</p></div>
+        <div class="dish"><h4>Assiette catalane</h4><p>Poivron mariné, filets d'anchois, toast de tapenade</p></div>
+        <div class="dish"><h4>Huîtres de l'étang, Bouzigues</h4><p>Par 6, 9 ou 12</p></div>
+        <div class="dish"><h4>12 moules persillées gratinées de l'étang</h4></div>
+        <div class="dish"><h4>6 huîtres de Bouzigues gratinées</h4><p>Fondue de poireaux & parmesan</p></div>
+        <div class="dish"><h4>Plateau de l'étang</h4><p>4 huîtres gratinées, 6 moules persillées, 4 huîtres crues</p></div>
+        <div class="dish"><h4>Tartare de saumon</h4></div>
+        <div class="dish"><h4>Soupe de poissons</h4></div>
+        <div class="dish"><h4>Friture de joëls</h4></div>
+      </div>
+
+      <div class="panel" id="plats">
+        <div class="dish"><h4>Fish and chips</h4></div>
+        <div class="dish"><h4>Duo de seiche & poulpe</h4><p>Poulpe à la plancha maison, frites & salade verte</p></div>
+        <div class="dish"><h4>Seiches à la plancha maison et son aïoli</h4><p>Frites & salade verte</p></div>
+        <div class="dish"><h4>Pennes pesto aux gambas</h4></div>
+        <div class="dish"><h4>Trio de poissons</h4><p>Loup, dorade & rouget, riz & légumes</p></div>
+        <div class="dish"><h4>Filets de rouget</h4><p>Sauce poivrons chorizo, riz, courgettes, aubergines</p></div>
+        <div class="dish"><h4>Gratiné de brandade de morue</h4><p>Salade verte</p></div>
+        <div class="dish"><h4>Poulpe à la plancha maison</h4><p>Frites, salade verte</p></div>
+        <div class="dish"><h4>Magret de canard sauce poivre</h4><p>Pommes sautées & cèpes</p></div>
+        <div class="dish"><h4>Pavé de thon persillade</h4><p>Riz & courgettes, aubergines</p></div>
+        <div class="dish"><h4>Brochette d'onglet de bœuf sauce échalotes</h4><p>Frites & salade verte</p></div>
+        <div class="dish"><h4>Brochette de poulet sauce citron</h4><p>Frites & salade verte</p></div>
+        <div class="dish"><h4>Assiette de frites</h4></div>
+        <div class="dish"><h4>Salade verte</h4></div>
+      </div>
+
+      <div class="panel" id="desserts">
+        <div class="dish"><h4>Crème caramel</h4></div>
+        <div class="dish"><h4>Fondant au chocolat et sa crème anglaise</h4></div>
+        <div class="dish"><h4>Pithiviers fondant</h4><p>Glace pistache & crème anglaise</p></div>
+        <div class="dish"><h4>Tarte tatin & sa boule de glace vanille</h4></div>
+        <div class="dish"><h4>Fromage blanc</h4><p>Coulis de fruits rouges, miel ou crème de marron</p></div>
+        <div class="dish"><h4>Nougat glacé</h4><p>Coulis de fruits rouges</p></div>
+      </div>
+
+      <div class="panel" id="crepes">
+        <h3 class="sub">Crêpes minute</h3>
+        <div class="chips">
+          <span>Nature</span><span>Sucre</span><span>Nutella</span><span>Miel</span><span>Crème de marron</span><span>Beurre salé sucré</span><span>Sucre citron</span><span>Sucre cannelle</span><span>Nutella coco ou amandes</span><span>Sirop d'érable</span><span>Miel citron ou amandes grillées</span><span>Sauce caramel au beurre salé</span><span>Suzette à l'orange & Grand Marnier</span><span>Rhum ambré ou Grand Marnier</span>
+        </div>
+        <h3 class="sub">Glaces</h3>
+        <p class="note">1 ou 2 boules, avec chantilly en option.</p>
+        <div class="chips">
+          <span>Vanille</span><span>Café</span><span>Chocolat</span><span>Pistache</span><span>Framboise</span><span>Rhum raisin</span><span>Caramel beurre salé</span><span>Citron</span><span>Noix de coco</span><span>Mangue</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="avis" class="avis section">
+      <div class="section-label">04 — LES AVIS</div>
+      <div class="avis-head">
+        <h2>Ce que disent <em>nos clients</em></h2>
+        <p><strong>227 avis</strong> sur Google<br>Souvent cités : service, entrées, cuisine, terrasse</p>
+      </div>
+      <div class="reviews">
+        <article class="review">
+          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p>Très belle adresse sur le port ! Les huîtres sont tout simplement exceptionnelles et le service est chaleureux et attentionné. Je recommande sans hésiter !</p>
+          <footer><b>Caroline Jounen</b><span>Il y a 2 mois · 30–40 €</span></footer>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p>Nous avons passé un excellent moment dans ce restaurant ! La nourriture était vraiment délicieuse et très bien présentée. Le restaurant offre également une très belle vue. Un grand merci à notre serveuse, très sympathique, souriante et attentionnée. L'endroit est également très accueillant pour les chiens.</p>
+          <footer><b>wout barbez</b><span>Il y a 2 mois · 20–30 €</span></footer>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p>Nous avons passé un excellent moment au Sanboulou. Les tapas de la mer en entrée étaient savoureux et copieux, ensuite le thon était cuit parfaitement et bien accompagné. L'ambiance est sympa, le cadre agréable avec une vue sur le port.</p>
+          <footer><b>alain vales</b><span>Il y a 6 mois · 30–40 €</span></footer>
+        </article>
+        <article class="review">
+          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <p>C'est tout à fait par hasard que nous nous sommes arrêtés au Sanboulou. Nous en sommes ravis ! Bien installés à l'ombre, le long du quai. Menu à 22 € : moules et tapas, brandade de morue et brochette d'onglet, pithiviers. Un régal, avec un excellent service ni trop lent ni trop rapide.</p>
+          <footer><b>Marie-Paule Boucha</b><span>Il y a 3 ans · 30–40 €</span></footer>
+        </article>
+      </div>
+    </section>
+
     <section id="infos" class="infos section">
-      <div class="section-label">03 — INFORMATIONS</div>
+      <div class="section-label">05 — INFORMATIONS</div>
       <div class="infos-grid">
         <div>
           <h2>Venez nous <em>rendre visite</em></h2>
