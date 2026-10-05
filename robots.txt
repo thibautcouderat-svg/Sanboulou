@@ -1,0 +1,3 @@
+# Site public : tous les robots (moteurs de recherche et agents IA) sont les bienvenus.
+User-agent: *
+Allow: /

@@ -3,50 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Le Sanboulou, restaurant traditionnel français et méditerranéen sur le port de Mèze.">
-  <title>Le Sanboulou — Restaurant à Mèze</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Le Sanboulou — Restaurant à Mèze, port de l'étang de Thau</title>
+  <meta name="description" content="Le Sanboulou, restaurant traditionnel français et méditerranéen sur le port de Mèze : huîtres de Bouzigues, poissons, fruits de mer, viandes grillées. Terrasse sur le quai.">
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="Le Sanboulou — Restaurant à Mèze">
+  <meta property="og:description" content="Cuisine française et méditerranéenne sur le port de Mèze, face à l'étang de Thau.">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="menu-avis.css">
+  <link rel="stylesheet" href="a11y-legal.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Sanboulou",
+    "description": "Restaurant traditionnel français et méditerranéen sur le port de Mèze, face à l'étang de Thau.",
+    "telephone": "+33467438920",
+    "servesCuisine": ["Française", "Méditerranéenne", "Fruits de mer"],
+    "acceptsReservations": true,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Quai Baptiste Guitard, Les Rives du Port",
+      "postalCode": "34140",
+      "addressLocality": "Mèze",
+      "addressRegion": "Occitanie",
+      "addressCountry": "FR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Thursday","Friday","Saturday","Sunday"], "opens": "19:00", "closes": "21:00" }
+    ],
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Terrasse sur le port", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Accès PMR", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Animaux acceptés", "value": true }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip" href="#contenu">Aller au contenu principal</a>
   <header class="header">
-    <a class="logo" href="#accueil">LE <span>SANBOULOU</span></a>
-    <button class="menu-btn" aria-label="Ouvrir le menu">☰</button>
-    <nav class="nav">
+    <a class="logo" href="#accueil" aria-label="Le Sanboulou, retour en haut de page">LE <span>SANBOULOU</span></a>
+    <button class="menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">☰</button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
       <a href="#accueil">Accueil</a>
       <a href="#restaurant">Le restaurant</a>
       <a href="#cuisine">La cuisine</a>
       <a href="#menu">Menu</a>
       <a href="#avis">Avis</a>
       <a href="#infos">Infos pratiques</a>
-      <a class="nav-call" href="tel:+33467438920">04 67 43 89 20</a>
+      <a class="nav-call" href="tel:+33467438920" aria-label="Appeler le restaurant au 04 67 43 89 20">04 67 43 89 20</a>
     </nav>
   </header>
 
-  <main>
-    <section id="accueil" class="hero">
-      <div class="hero-image"></div>
+  <main id="contenu">
+    <section id="accueil" class="hero" aria-labelledby="titre-accueil">
+      <div class="hero-image" role="presentation"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">MÈZE · ÉTANG DE THAU</p>
-        <h1>Le Sanboulou</h1>
+        <h1 id="titre-accueil">Le Sanboulou</h1>
         <p class="hero-subtitle">Restaurant traditionnel français & méditerranéen</p>
         <div class="hero-actions">
           <a href="#menu" class="btn btn-primary">Voir le menu</a>
           <a href="tel:+33467438920" class="btn btn-light">Réserver par téléphone</a>
         </div>
       </div>
-      <div class="scroll-indicator">↓</div>
+      <div class="scroll-indicator" aria-hidden="true">↓</div>
     </section>
 
-    <section id="restaurant" class="intro section">
+    <section id="restaurant" class="intro section" aria-labelledby="titre-restaurant">
       <div class="section-label">01 — LE RESTAURANT</div>
       <div class="intro-grid">
         <div>
-          <h2>Une adresse au cœur de <em>Mèze</em></h2>
+          <h2 id="titre-restaurant">Une adresse au cœur de <em>Mèze</em></h2>
         </div>
         <div>
           <p class="lead">Bienvenue au Sanboulou, restaurant traditionnel français et méditerranéen situé sur le port de Mèze.</p>
@@ -55,9 +84,10 @@
       </div>
     </section>
 
-    <section class="photo-section">
+    <section class="photo-section" aria-label="Photo de la façade">
       <div class="photo-card">
-        <img src="assets/sanboulou.jpg" alt="Façade du restaurant Le Sanboulou à Mèze">
+        <img src="assets/sanboulou.jpg" width="1600" height="900" loading="lazy" decoding="async"
+             alt="Façade du restaurant Le Sanboulou sur le quai du port de Mèze : enseigne jaune « Le Sanboulou », auvent brun et grandes baies vitrées donnant sur la salle.">
         <div class="photo-caption">
           <span>Le Sanboulou</span>
           <small>Quai Baptiste Guitard · Mèze</small>
@@ -65,131 +95,132 @@
       </div>
     </section>
 
-    <section id="cuisine" class="cuisine section">
+    <section id="cuisine" class="cuisine section" aria-labelledby="titre-cuisine">
       <div class="section-label">02 — LA CUISINE</div>
       <div class="cuisine-heading">
-        <h2>Des saveurs <em>méditerranéennes</em></h2>
+        <h2 id="titre-cuisine">Des saveurs <em>méditerranéennes</em></h2>
         <p>Poissons, fruits de mer, viandes et cuisine française traditionnelle.</p>
       </div>
       <div class="cards">
         <article class="card">
-          <span class="card-number">01</span>
+          <span class="card-number" aria-hidden="true">01</span>
           <h3>Produits de la mer</h3>
           <p>Poissons, loup de mer et fruits de mer dans l'esprit de la cuisine méditerranéenne.</p>
         </article>
         <article class="card">
-          <span class="card-number">02</span>
+          <span class="card-number" aria-hidden="true">02</span>
           <h3>Cuisine française</h3>
           <p>Une cuisine traditionnelle et généreuse, pensée pour un repas convivial.</p>
         </article>
         <article class="card">
-          <span class="card-number">03</span>
+          <span class="card-number" aria-hidden="true">03</span>
           <h3>Le cadre</h3>
           <p>Profitez d'un emplacement sur le port de Mèze, avec une terrasse tournée vers l'étang de Thau.</p>
         </article>
       </div>
     </section>
 
-    <section id="menu" class="menu section">
+    <section id="menu" class="menu section" aria-labelledby="titre-menu">
       <div class="section-label">03 — LE MENU</div>
-      <h2 class="menu-title">Notre <em>carte</em></h2>
-      <div class="tabs" role="tablist">
-        <button class="tab active" role="tab" aria-selected="true" data-tab="entrees">Entrées</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="plats">Plats</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="desserts">Desserts</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="crepes">Crêpes & glaces</button>
+      <h2 id="titre-menu" class="menu-title">Notre <em>carte</em></h2>
+      <div class="tabs" role="tablist" aria-label="Catégories de la carte">
+        <button class="tab active" type="button" role="tab" id="tab-entrees" aria-controls="entrees" aria-selected="true" data-tab="entrees">Entrées</button>
+        <button class="tab" type="button" role="tab" id="tab-plats" aria-controls="plats" aria-selected="false" tabindex="-1" data-tab="plats">Plats</button>
+        <button class="tab" type="button" role="tab" id="tab-desserts" aria-controls="desserts" aria-selected="false" tabindex="-1" data-tab="desserts">Desserts</button>
+        <button class="tab" type="button" role="tab" id="tab-crepes" aria-controls="crepes" aria-selected="false" tabindex="-1" data-tab="crepes">Crêpes & glaces</button>
       </div>
 
-      <div class="panel active" id="entrees">
-        <div class="dish"><h4>Assiette de tapas</h4><p>Poulpes marinés, moules piquantes, beignets d'oignon</p></div>
-        <div class="dish"><h4>Assiette vegan</h4><p>Falafel (croquettes de pois chiche), salade verte, sauce blanche</p></div>
-        <div class="dish"><h4>Mariachi de gambas</h4><p>Gambas snackées à la plancha, guacamole, tartare tomate</p></div>
-        <div class="dish"><h4>Assiette catalane</h4><p>Poivron mariné, filets d'anchois, toast de tapenade</p></div>
-        <div class="dish"><h4>Huîtres de l'étang, Bouzigues</h4><p>Par 6, 9 ou 12</p></div>
-        <div class="dish"><h4>12 moules persillées gratinées de l'étang</h4></div>
-        <div class="dish"><h4>6 huîtres de Bouzigues gratinées</h4><p>Fondue de poireaux & parmesan</p></div>
-        <div class="dish"><h4>Plateau de l'étang</h4><p>4 huîtres gratinées, 6 moules persillées, 4 huîtres crues</p></div>
-        <div class="dish"><h4>Tartare de saumon</h4></div>
-        <div class="dish"><h4>Soupe de poissons</h4></div>
-        <div class="dish"><h4>Friture de joëls</h4></div>
+      <div class="panel active" id="entrees" role="tabpanel" aria-labelledby="tab-entrees" tabindex="0">
+        <div class="dish"><h3>Assiette de tapas</h3><p>Poulpes marinés, moules piquantes, beignets d'oignon</p></div>
+        <div class="dish"><h3>Assiette vegan</h3><p>Falafel (croquettes de pois chiche), salade verte, sauce blanche</p></div>
+        <div class="dish"><h3>Mariachi de gambas</h3><p>Gambas snackées à la plancha, guacamole, tartare tomate</p></div>
+        <div class="dish"><h3>Assiette catalane</h3><p>Poivron mariné, filets d'anchois, toast de tapenade</p></div>
+        <div class="dish"><h3>Huîtres de l'étang, Bouzigues</h3><p>Par 6, 9 ou 12</p></div>
+        <div class="dish"><h3>12 moules persillées gratinées de l'étang</h3></div>
+        <div class="dish"><h3>6 huîtres de Bouzigues gratinées</h3><p>Fondue de poireaux & parmesan</p></div>
+        <div class="dish"><h3>Plateau de l'étang</h3><p>4 huîtres gratinées, 6 moules persillées, 4 huîtres crues</p></div>
+        <div class="dish"><h3>Tartare de saumon</h3></div>
+        <div class="dish"><h3>Soupe de poissons</h3></div>
+        <div class="dish"><h3>Friture de joëls</h3></div>
       </div>
 
-      <div class="panel" id="plats">
-        <div class="dish"><h4>Fish and chips</h4></div>
-        <div class="dish"><h4>Duo de seiche & poulpe</h4><p>Poulpe à la plancha maison, frites & salade verte</p></div>
-        <div class="dish"><h4>Seiches à la plancha maison et son aïoli</h4><p>Frites & salade verte</p></div>
-        <div class="dish"><h4>Pennes pesto aux gambas</h4></div>
-        <div class="dish"><h4>Trio de poissons</h4><p>Loup, dorade & rouget, riz & légumes</p></div>
-        <div class="dish"><h4>Filets de rouget</h4><p>Sauce poivrons chorizo, riz, courgettes, aubergines</p></div>
-        <div class="dish"><h4>Gratiné de brandade de morue</h4><p>Salade verte</p></div>
-        <div class="dish"><h4>Poulpe à la plancha maison</h4><p>Frites, salade verte</p></div>
-        <div class="dish"><h4>Magret de canard sauce poivre</h4><p>Pommes sautées & cèpes</p></div>
-        <div class="dish"><h4>Pavé de thon persillade</h4><p>Riz & courgettes, aubergines</p></div>
-        <div class="dish"><h4>Brochette d'onglet de bœuf sauce échalotes</h4><p>Frites & salade verte</p></div>
-        <div class="dish"><h4>Brochette de poulet sauce citron</h4><p>Frites & salade verte</p></div>
-        <div class="dish"><h4>Assiette de frites</h4></div>
-        <div class="dish"><h4>Salade verte</h4></div>
+      <div class="panel" id="plats" role="tabpanel" aria-labelledby="tab-plats" tabindex="0">
+        <div class="dish"><h3>Fish and chips</h3></div>
+        <div class="dish"><h3>Duo de seiche & poulpe</h3><p>Poulpe à la plancha maison, frites & salade verte</p></div>
+        <div class="dish"><h3>Seiches à la plancha maison et son aïoli</h3><p>Frites & salade verte</p></div>
+        <div class="dish"><h3>Pennes pesto aux gambas</h3></div>
+        <div class="dish"><h3>Trio de poissons</h3><p>Loup, dorade & rouget, riz & légumes</p></div>
+        <div class="dish"><h3>Filets de rouget</h3><p>Sauce poivrons chorizo, riz, courgettes, aubergines</p></div>
+        <div class="dish"><h3>Gratiné de brandade de morue</h3><p>Salade verte</p></div>
+        <div class="dish"><h3>Poulpe à la plancha maison</h3><p>Frites, salade verte</p></div>
+        <div class="dish"><h3>Magret de canard sauce poivre</h3><p>Pommes sautées & cèpes</p></div>
+        <div class="dish"><h3>Pavé de thon persillade</h3><p>Riz & courgettes, aubergines</p></div>
+        <div class="dish"><h3>Brochette d'onglet de bœuf sauce échalotes</h3><p>Frites & salade verte</p></div>
+        <div class="dish"><h3>Brochette de poulet sauce citron</h3><p>Frites & salade verte</p></div>
+        <div class="dish"><h3>Assiette de frites</h3></div>
+        <div class="dish"><h3>Salade verte</h3></div>
       </div>
 
-      <div class="panel" id="desserts">
-        <div class="dish"><h4>Crème caramel</h4></div>
-        <div class="dish"><h4>Fondant au chocolat et sa crème anglaise</h4></div>
-        <div class="dish"><h4>Pithiviers fondant</h4><p>Glace pistache & crème anglaise</p></div>
-        <div class="dish"><h4>Tarte tatin & sa boule de glace vanille</h4></div>
-        <div class="dish"><h4>Fromage blanc</h4><p>Coulis de fruits rouges, miel ou crème de marron</p></div>
-        <div class="dish"><h4>Nougat glacé</h4><p>Coulis de fruits rouges</p></div>
+      <div class="panel" id="desserts" role="tabpanel" aria-labelledby="tab-desserts" tabindex="0">
+        <div class="dish"><h3>Crème caramel</h3></div>
+        <div class="dish"><h3>Fondant au chocolat et sa crème anglaise</h3></div>
+        <div class="dish"><h3>Pithiviers fondant</h3><p>Glace pistache & crème anglaise</p></div>
+        <div class="dish"><h3>Tarte tatin & sa boule de glace vanille</h3></div>
+        <div class="dish"><h3>Fromage blanc</h3><p>Coulis de fruits rouges, miel ou crème de marron</p></div>
+        <div class="dish"><h3>Nougat glacé</h3><p>Coulis de fruits rouges</p></div>
       </div>
 
-      <div class="panel" id="crepes">
+      <div class="panel" id="crepes" role="tabpanel" aria-labelledby="tab-crepes" tabindex="0">
         <h3 class="sub">Crêpes minute</h3>
-        <div class="chips">
-          <span>Nature</span><span>Sucre</span><span>Nutella</span><span>Miel</span><span>Crème de marron</span><span>Beurre salé sucré</span><span>Sucre citron</span><span>Sucre cannelle</span><span>Nutella coco ou amandes</span><span>Sirop d'érable</span><span>Miel citron ou amandes grillées</span><span>Sauce caramel au beurre salé</span><span>Suzette à l'orange & Grand Marnier</span><span>Rhum ambré ou Grand Marnier</span>
-        </div>
+        <ul class="chips">
+          <li>Nature</li><li>Sucre</li><li>Nutella</li><li>Miel</li><li>Crème de marron</li><li>Beurre salé sucré</li><li>Sucre citron</li><li>Sucre cannelle</li><li>Nutella coco ou amandes</li><li>Sirop d'érable</li><li>Miel citron ou amandes grillées</li><li>Sauce caramel au beurre salé</li><li>Suzette à l'orange & Grand Marnier</li><li>Rhum ambré ou Grand Marnier</li>
+        </ul>
         <h3 class="sub">Glaces</h3>
         <p class="note">1 ou 2 boules, avec chantilly en option.</p>
-        <div class="chips">
-          <span>Vanille</span><span>Café</span><span>Chocolat</span><span>Pistache</span><span>Framboise</span><span>Rhum raisin</span><span>Caramel beurre salé</span><span>Citron</span><span>Noix de coco</span><span>Mangue</span>
-        </div>
+        <ul class="chips">
+          <li>Vanille</li><li>Café</li><li>Chocolat</li><li>Pistache</li><li>Framboise</li><li>Rhum raisin</li><li>Caramel beurre salé</li><li>Citron</li><li>Noix de coco</li><li>Mangue</li>
+        </ul>
       </div>
+      <p class="menu-note">Carte indicative, susceptible de varier selon les arrivages. Prix en euros, taxes et service compris, affichés au restaurant. Informations sur les allergènes : demandez à notre équipe.</p>
     </section>
 
-    <section id="avis" class="avis section">
+    <section id="avis" class="avis section" aria-labelledby="titre-avis">
       <div class="section-label">04 — LES AVIS</div>
       <div class="avis-head">
-        <h2>Ce que disent <em>nos clients</em></h2>
-        <p><strong>227 avis</strong> sur Google<br>Souvent cités : service, entrées, cuisine, terrasse</p>
+        <h2 id="titre-avis">Ce que disent <em>nos clients</em></h2>
+        <p>Extraits d'avis publiés sur Google Maps, noms abrégés. Retrouvez tous les avis sur la fiche Google du restaurant.</p>
       </div>
       <div class="reviews">
         <article class="review">
-          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+          <div class="stars" role="img" aria-label="Note de 5 sur 5">★★★★★</div>
           <p>Très belle adresse sur le port ! Les huîtres sont tout simplement exceptionnelles et le service est chaleureux et attentionné. Je recommande sans hésiter !</p>
-          <footer><b>Caroline Jounen</b><span>Il y a 2 mois · 30–40 €</span></footer>
+          <footer><b>Caroline J.</b><span>Visité en juillet</span></footer>
         </article>
         <article class="review">
-          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
-          <p>Nous avons passé un excellent moment dans ce restaurant ! La nourriture était vraiment délicieuse et très bien présentée. Le restaurant offre également une très belle vue. Un grand merci à notre serveuse, très sympathique, souriante et attentionnée. L'endroit est également très accueillant pour les chiens.</p>
-          <footer><b>wout barbez</b><span>Il y a 2 mois · 20–30 €</span></footer>
+          <div class="stars" role="img" aria-label="Note de 5 sur 5">★★★★★</div>
+          <p>Nous avons passé un excellent moment dans ce restaurant ! La nourriture était vraiment délicieuse et très bien présentée. […] Un grand merci à notre serveuse, qui était très sympathique, souriante et attentionnée. L’endroit est également très accueillant pour les chiens […].</p>
+          <footer><b>Wout B.</b><span>Visité en juillet</span></footer>
         </article>
         <article class="review">
-          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
-          <p>Nous avons passé un excellent moment au Sanboulou. Les tapas de la mer en entrée étaient savoureux et copieux, ensuite le thon était cuit parfaitement et bien accompagné. L'ambiance est sympa, le cadre agréable avec une vue sur le port.</p>
-          <footer><b>alain vales</b><span>Il y a 6 mois · 30–40 €</span></footer>
+          <div class="stars" role="img" aria-label="Note de 5 sur 5">★★★★★</div>
+          <p>Nous avons passé un excellent moment au Sanboulou. Les tapas de la mer en entrée étaient savoureux et copieux, ensuite le thon était cuit parfaitement et bien accompagné. L'ambiance est sympa, le cadre agréable avec une vue sur le port. […]</p>
+          <footer><b>Alain V.</b><span>Visité en mars</span></footer>
         </article>
         <article class="review">
-          <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
-          <p>C'est tout à fait par hasard que nous nous sommes arrêtés au Sanboulou. Nous en sommes ravis ! Bien installés à l'ombre, le long du quai. Menu à 22 € : moules et tapas, brandade de morue et brochette d'onglet, pithiviers. Un régal, avec un excellent service ni trop lent ni trop rapide.</p>
-          <footer><b>Marie-Paule Boucha</b><span>Il y a 3 ans · 30–40 €</span></footer>
+          <div class="stars" role="img" aria-label="Note de 5 sur 5">★★★★★</div>
+          <p>C'est tout à fait par hasard que nous nous sommes arrêtés au Sanboulou. Nous en sommes ravis ! Nous étions bien installés à l'ombre, le long du quai. […] Un régal ! A cela s'ajoute un excellent service ni trop lent ni trop rapide.</p>
+          <footer><b>Marie-Paule B.</b><span>Visité en juillet 2023</span></footer>
         </article>
       </div>
     </section>
 
-    <section id="infos" class="infos section">
+    <section id="infos" class="infos section" aria-labelledby="titre-infos">
       <div class="section-label">05 — INFORMATIONS</div>
       <div class="infos-grid">
         <div>
-          <h2>Venez nous <em>rendre visite</em></h2>
-          <p class="address">Quai Baptiste Guitard<br>Les Rives du Port<br>34140 Mèze, France</p>
-          <a class="big-phone" href="tel:+33467438920">04 67 43 89 20</a>
+          <h2 id="titre-infos">Venez nous <em>rendre visite</em></h2>
+          <address class="address">Quai Baptiste Guitard<br>Les Rives du Port<br>34140 Mèze, France</address>
+          <a class="big-phone" href="tel:+33467438920" aria-label="Appeler le restaurant au 04 67 43 89 20">04 67 43 89 20</a>
         </div>
         <div class="hours">
           <h3>Horaires</h3>
@@ -204,10 +235,10 @@
       </div>
     </section>
 
-    <section class="reservation">
+    <section class="reservation" aria-labelledby="titre-resa">
       <div>
         <p class="eyebrow">UNE TABLE ?</p>
-        <h2>Réservez votre moment au Sanboulou.</h2>
+        <h2 id="titre-resa">Réservez votre moment au Sanboulou.</h2>
       </div>
       <a href="tel:+33467438920" class="btn btn-dark">04 67 43 89 20</a>
     </section>
@@ -217,6 +248,13 @@
     <div class="footer-logo">LE <span>SANBOULOU</span></div>
     <div>Quai Baptiste Guitard · 34140 Mèze</div>
     <div><a href="tel:+33467438920">04 67 43 89 20</a></div>
+    <nav class="legal-links" aria-label="Informations légales">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="cgu.html">Conditions d'utilisation</a>
+      <a href="mentions-legales.html#mediation">Médiation de la consommation</a>
+    </nav>
   </footer>
 
   <script src="script.js"></script>

@@ -1,0 +1,11 @@
+# Le Sanboulou
+
+> Restaurant traditionnel français et méditerranéen sur le port de Mèze (Hérault, Occitanie), face à l'étang de Thau.
+
+- Adresse : Quai Baptiste Guitard, Les Rives du Port, 34140 Mèze, France
+- Téléphone (réservation par téléphone) : 04 67 43 89 20
+- Cuisine : huîtres de Bouzigues, moules de l'étang, poissons, fruits de mer, poulpe et seiche à la plancha, brochettes, magret de canard, crêpes et glaces
+- Cadre : terrasse sur le quai, accès PMR, animaux acceptés
+- Horaires : lundi 12h-14h et 19h-21h ; mardi 12h-14h ; mercredi fermé ; jeudi à dimanche 12h-14h et 19h-21h
+- Pages : accueil (index.html), mentions légales (mentions-legales.html), politique de confidentialité (confidentialite.html), cookies (cookies.html), conditions d'utilisation (cgu.html)
+- Données personnelles : le site n'utilise aucun cookie ni traceur.
